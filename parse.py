@@ -19,7 +19,7 @@ def get_content(html):
     cars = []
     for item in items:
         cars.append({
-            'title': item.find('div', class_='ListingItem-module__columnCellSummary').get_text()
+            'title': item.find('a', class_='ListingItem-module__main').get_text()
         })
     print(cars)
 
